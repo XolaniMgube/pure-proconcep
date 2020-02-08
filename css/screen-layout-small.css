@@ -13,9 +13,9 @@ h1{
 
 
 #home-section{
-	height: 90vh;
-	grid-template-rows: 60px 1fr 150px 100px;
-/*	grid-template-areas:
+	height: 92vh;
+	grid-template-rows: 60px 1fr 80px 100px;
+	/*grid-template-areas:
 		"nav"
 		"socials"
 		"more"
@@ -79,9 +79,8 @@ nav img{
 .socials{
 	grid-column: 1/2;
 	grid-row: 3/5;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	align-items: center;
+	align-items: top;
+	padding-top: 40px;
 	font-size: 14pt;
 	background: rgba(0,0,0,0.5);
 }
