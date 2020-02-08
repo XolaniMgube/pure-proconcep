@@ -1,0 +1,267 @@
+html{
+	overflow-x:hidden;
+    width:100%;
+}
+
+#home-section{
+	height: 100vh;
+	grid-template-rows: 60px 1fr 200px 100px;
+/*	grid-template-areas:
+		"nav"
+		"socials"
+		"more"
+	;*/
+	background: url(../images/background-medium2.jpg) no-repeat 50% 0px;
+}
+
+nav{
+	grid-column: 1/2;
+	grid-row: 1/2;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 60px 1fr;
+	grid-template-areas:
+		"logo	hamburger"
+		"nav-list	nav-list"
+	;
+	overflow: hidden;
+	padding: 0;
+}
+
+
+nav img{
+	display: block;
+}
+
+.logo{
+	grid-area: logo;
+	padding-left: 4%;
+	
+}
+
+.hamburger-menu{
+	grid-area: hamburger;
+	justify-self: right;
+	padding-right: 50px;
+}
+
+.nav-list{
+	grid-area: nav-list;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	align-items: center;
+	width: 50vw;
+	height: 50vh;
+	background-color: #1a1a1a;
+	padding: 0;
+	margin: 0;
+	z-index: 10;
+	
+}
+
+.nav-list a{
+	font-size: 20pt;
+}
+
+.hamburger-menu img{
+	width: 30px;
+
+}
+
+.socials{
+	grid-column: 1/2;
+	grid-row: 3/5;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	font-size: 14pt;
+	background: rgba(0,0,0,0.5);
+}
+
+.inside-socials{
+	padding-left: 0px;
+}
+
+.socials img{
+	width: 25px;
+}
+
+.socials.other-pages{
+	display: none;
+}
+
+
+
+.more{
+	grid-column: 1/2;
+	grid-row: 4/5;
+	width: 200px;
+	height: 50px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas:d
+		"view-more"
+	;
+}
+
+.view-more{
+	grid-area: view-more;
+	width: 100%;
+}
+
+.more-info{
+	display: none;
+}
+
+
+
+
+
+/*important*****************************************************************/
+/*the thing that makes the nav work well on mobile*/
+/*important******************************************************************/
+/*important*************************************************************/
+.find-a-home-nav{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px;
+	z-index: 3;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*About Us**************************************************************************/
+
+#about-section{
+	grid-template-columns: 1fr;
+	grid-template-rows:1fr 1fr 3fr 3fr 3fr;
+	grid-template-areas:
+		"about-header"
+		"about-us"
+		"mission"
+		"values"
+		"scope"
+	;
+	width: 95%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#find-a-home{
+	width: 95%;
+	margin: 0 auto;
+	grid-gap: 0;
+	grid-template-rows: 50px auto;
+}
+
+
+
+
+.home{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 3fr 1fr;
+	grid-template-areas:
+		"home-images"
+		"home-info"
+	;
+	padding: 100px 0;
+}
+
+
+.home-info .location{
+	grid-area: home-info;
+	padding-left: 0px;
+	padding-top: 10px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr auto 1fr;
+	grid-template-areas:
+		"info-header"
+		"status"
+		"description"
+		"price"
+		"view-house"
+	;
+	align-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+form{
+	grid-template-columns: 1fr;
+	grid-template-rows: 2fr 1fr 40px 40px 150px 40px;
+	grid-template-areas:
+		"contact-header"
+		"contact-sub-header"
+		"name"
+		"email"
+		"message"
+		"submit"
+	;
+	grid-gap: 30px;
+}
+
+.name{
+	width: 100%;
+}
+
+.email{
+	width: 100%;
+}
+
+.message{
+	width: 100%;
+}
+

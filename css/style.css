@@ -1,0 +1,77 @@
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	color: #1a1a1a;
+	line-height: 1.5em;
+	font-family: 'Roboto', sans-serif;
+	background-color: #f1f1f1;
+}
+
+h1{
+	font-size: 50pt;
+	font-weight: bold;
+}
+
+h2{
+	font-size: 20pt;
+}
+
+h3{
+	font-size: 12pt;
+}
+
+h4{
+	font-size: 16pt;
+	padding: 5px 5px;
+	margin: 0;
+}
+
+h6{
+	font-size: 12pt;
+	margin: 0;
+	padding: 5px;
+}
+
+h6.price{
+	font-size: 14pt;
+}
+
+p{
+	padding: 5px 5px;
+	margin: 0;
+}
+
+span{
+	color: green;
+}
+
+span.from{
+	color: grey;
+	font-size: 8pt;
+}
+
+a{
+	color: #2c874a;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.active{
+	color: #2c874a;
+}
