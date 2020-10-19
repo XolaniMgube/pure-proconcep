@@ -1,78 +1,83 @@
 #home-section{
 	height: 100vh;
-	background: url(../images/background-extralarge2.jpg) no-repeat 50% 20px;
+	background: url(../images/background-image.jpg) no-repeat 50% 50%;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 30px 80px 1fr;
+	grid-template-rows: 100px 2fr 1fr;
 	grid-template-areas: 
-		"socials"
-		"nav"
-		"more"
+		"header"
+		"floating-text"
+		"ad-box"
 	;
 	
 }
 
-.socials{
-	grid-area: socials;
-	background-color: #1a1a1a;
-	color: white;
+
+header{
+	grid-area: header;
+	background-color: #2c874a;
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-areas:
-		"inside-socials"
-	;
-	width: 100vw;
-}
-
-.inside-socials{
-	grid-area: inside-socials;
-	display: grid;
-	grid-template-columns: 1fr 1fr 3fr;
-	grid-template-rows: 1fr;
-	/*grid-template-areas:
-		"facebook	twitter	google-plus	phone	number"
-	;*/
-	justify-self: center;
-	width: 300px;
-	justify-items: center;
-}
-
-.inside-socials img{
-	padding-top: 5px;
-}
-
-.facebook{
-	justify-self: end;
-}
-
-.phone{
-	justify-self: right;
-}
-
-.number{
-	justify-self: left;
-}
-
-
-
-.socials img{
-	width: 20px;
-}
-
-nav{
-	grid-area: nav;
-	background-color: #1a1a1a;
-	display: grid;
-	align-items: center;
-	padding: 0px 50px 0px 50px;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 200px;
+	height: 100px;
 	grid-template-areas:
 		"logo   nav-list"
 	;
 }
 
 .logo{
+	display: grid;
+	grid-template-columns: 160px 1fr;
+}
+
+.logo img{
+	width: 160px;
+}
+
+.floating-text{
+	grid-area: floating-text;
+	align-self: center;
+	justify-self: center;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+}
+
+.ad-box{
+	grid-area: ad-box;
+	display: grid;
+	background-color: #ffffff;
+	height: 220px;
+	align-self: end;
+	justify-self: center;
+	width: 480px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 40px 1fr;
+	grid-template-areas: 
+		"view-more     enquire"
+		"ad-box-info   ad-box-info"
+		;
+}
+
+.ad-box button.view-more{
+	grid-area: view-more;
+	background-color: #2c874a;	
+}
+
+.ad-box button.enquire{
+	grid-area: enquire;
+	background-color: #3d3d3d;
+}
+
+.ad-box-info{
+	grid-area: ad-box-info;
+	padding: 10px;
+}
+
+
+/* .logo{
 	grid-area: logo;
 	color: white;
 	text-transform: uppercase;
@@ -97,9 +102,7 @@ nav{
 	text-decoration: none;
 }
 
-nav img{
-	display: none;
-}
+
 
 .more{
 	grid-area: more;
@@ -124,7 +127,6 @@ nav img{
 	text-align: center;
 	padding-top: 10px;
 	text-transform: uppercase;
-	/*box-shadow: 1px -5px 20px 1px #000000;*/
 	z-index: 2;
 }
 
@@ -135,16 +137,17 @@ nav img{
 .more-info{
 	grid-area: more-info;
 	background-color: #f1f1f1;
-	/*box-shadow: 1px 1px 20px 2px #000000;*/
+} */
+
+
+
+
+
+
+
+nav img{
+	display: none;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -164,7 +167,7 @@ nav img{
 
 /*About Us***************************************************************************/
 
-#about-section{
+/* #about-section{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr 2fr 2fr;
@@ -225,7 +228,7 @@ nav img{
 
 #about-section .about-paragraphs{
 	grid-area: mission-paragraph;
-}
+} */
 
 
 
@@ -288,7 +291,7 @@ nav img{
 
 
 /*Find a home****************************************************************/
-#find-a-home{
+/* #find-a-home{
 	width: 80%;
 	margin: 0 auto;
 }
@@ -372,26 +375,11 @@ nav img{
 
 img.mini-home{
 	width: 95%;
-}
+} */
 
-/*.home-image button{
-	background-color: green;
-	border: none;
-	color: white;
-	padding: 10px 15px;
-	font-size: 12pt;
-	text-transform: uppercase;
-	font-family: 'Poppins', sans-serif;
-	margin: 10px 0 10px 72%;
 
-}
 
-.home-image button:hover{
-	cursor: pointer;
-
-}*/
-
-.home-info .location{
+/* .home-info .location{
 	grid-area: home-info;
 	padding-left: 20px;
 	display: grid;
@@ -425,7 +413,7 @@ img.mini-home{
 
 .view-house{
 	grid-area: view-house;
-}
+} */
 
 
 
@@ -447,31 +435,104 @@ img.mini-home{
 
 /*The Footer Code*******************************************************/
 
-footer{
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 3fr 1fr;
-	grid-template-areas:
-		"section1		section2"
-		"copyrights		copyrights"
-	;
-	background-color: #1a1a1a;
-	color: white;
-	justify-items: center;
-	padding: 20px;
-}
+/* 
 
-.section.one{
-	grid-area: section1;
-}
 
-.section.two{
-	grid-area: section2;
-}
 
-.copyrights{
-	grid-area: copyrights;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

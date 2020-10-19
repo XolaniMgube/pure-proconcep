@@ -1,5 +1,5 @@
 *{
-	box-sizing: border-box;
+	/* box-sizing: border-box; */
 }
 
 body{
@@ -74,4 +74,15 @@ a:hover{
 
 .active{
 	color: #2c874a;
+}
+
+button{
+	width: 240px;
+	border: none;
+	margin: 0;
+	padding: 0;
+	height: 45px;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
 }
