@@ -19,22 +19,39 @@ body{
 }
 
 h1{
-	font-size: 50pt;
+	font-size: 25pt;
+	letter-spacing: 7px;
+	word-spacing: 5px;
 	font-weight: bold;
+	font-family: 'Playfair Display', serif;
+	margin: 0;
+	padding: 0 20px;
 }
 
 h2{
-	font-size: 20pt;
+	font-size: 22pt;
+	font-weight: normal;
+	font-family: 'Playfair Display', serif;
 }
 
 h3{
-	font-size: 12pt;
+	font-size: 14pt;
+	font-family: 'Playfair Display', serif;
+	letter-spacing: 2px;
 }
 
 h4{
-	font-size: 16pt;
+	font-size: 12pt;
 	padding: 5px 5px;
 	margin: 0;
+	letter-spacing: 2px;
+}
+
+h5{
+	color: #2c874a;
+	font-size: 16px;
+	padding: 0 10px;
+	margin: 30px 0 0 0;
 }
 
 h6{
@@ -50,6 +67,7 @@ h6.price{
 p{
 	padding: 5px 5px;
 	margin: 0;
+	font-size: 15px;
 }
 
 span{
@@ -73,7 +91,7 @@ a:hover{
 }
 
 .active{
-	color: #2c874a;
+	background-color: #3d3d3d;
 }
 
 button{
@@ -85,4 +103,9 @@ button{
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: bold;
+}
+
+button:hover{
+	cursor: pointer;
+	color: #3d3d3d;
 }
