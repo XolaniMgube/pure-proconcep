@@ -27,22 +27,22 @@
 	
 
 		<div id="home-section">
-			<header id="navbar">
+			<header id="header">
 				<div class="logo">
-					<img src="./images/logo.png" alt="logo">
-					<h2 id="logo" >Pure Proconcep</h2>
+					<img id="logoImg" src="./images/logo.png" alt="logo">
+					<h2 id="logoText" >Pure Proconcep</h2>
 				</div>
 			
-				<nav class="nav">
+				<nav class="nav" id="navbar">
 					<div class="hamburger-menu">
 						<img onclick="toggleNav()" src="images/hamburger.png">
 					</div>
 
 					<ul class="nav-list">
-						<li><a class="active" href="index.html#home-section">Home</a></li>
-						<li><a href="index.html#about-section">About Us</a></li>
-						<li><a href="index.html#find-a-home">Find a Home</a></li>
-						<li><a href="index.html#contact-section">Contact Us</a></li>
+						<li><a class="navigation active" onclick="toggleNav()" href="#home-section">Home</a></li>
+						<li><a class="navigation" onclick="toggleNav()" href="#about-section">About Us</a></li>
+						<li><a class="navigation" onclick="toggleNav()" href="#find-a-home">Find a Home</a></li>
+						<li><a class="navigation" onclick="toggleNav()" href="#contact-section">Contact Us</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -54,8 +54,8 @@
 
 			<div class="ad-box">
 
-				<button class="view-more">view more</button>
-				<button class="enquire">enquire</button>
+				<button class="view-more"><a href="#find-a-home">view more</a></button>
+				<button class="enquire"><a href="#contact-section"> enquire</a></button>
 
 				<div class="ad-box-info">
 					<h4>Heidleburg, VanderbjilPark</h4>
@@ -115,8 +115,8 @@
 				<h4>Nyiko Mhlongo</h4>
 				<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
 				<div class="nyiko-social-media">
-					<a href=""><img src="./images/about-facebook.png" alt="facebook"></a>
-					<a href=""><img src="./images/about-linkedin.png" alt="linkedin"></a>
+					<a href="https://www.facebook.com/herman.mhlongo.7" target="_blank"><img src="./images/about-facebook.png" alt="facebook"></a>
+					<a href="https://www.linkedin.com/in/nyiko-mhlongo-aa01a0b5/" target="_blank"><img src="./images/about-linkedin.png" alt="linkedin"></a>
 				</div>
 			</div>
 
@@ -133,7 +133,7 @@
 		<div class="find-a-home-section" id="find-a-home">
 
 			<h1>Find a home</h1>
-			<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+			<p>Here are the few available houses to turn into homes that are available at the moment, Have a look and leave us a message and we will get back to you as soon as possible.</p>
 
 			<div class="house one">
 				<img src="./images/house-one.png" alt="house one">
@@ -144,8 +144,8 @@
 					<h6 class="price"><span><span class="from">FROM </span>R605 000</span></h6>
 				</div>
 				<div class="house-buttons">
-					<button class="view-more">view more</button>
-					<button class="enquire">enquire</button>
+					<!-- <button class="view-more"><a href="#find-a-home">view more</a></button> -->
+					<button class="enquire"><a href="#contact-section"> enquire</a></button>
 				</div>
 			</div>
 
@@ -158,8 +158,8 @@
 					<h6 class="price"><span class="from">FROM </span> <span>R575 000</span></h6>
 				</div>
 				<div class="house-buttons">
-					<button class="view-more">view more</button>
-					<button class="enquire">enquire</button>
+					<!-- <button class="view-more"><a href="#find-a-home">view more</a></button> -->
+					<button class="enquire"><a href="#contact-section"> enquire</a></button>
 				</div>
 			</div>
 
@@ -237,19 +237,7 @@
 
 </body>
 
-<!-- <script>
-	// When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
-	window.onscroll = function() {scrollFunction()};
-	
-	function scrollFunction() {
-	  if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
-		document.getElementById("navbar").style.height = "50px";
-		document.getElementById("logo").style.fontSize = "25px";
-	  } else {
-		document.getElementById("navbar").style.height = "100px";
-		document.getElementById("logo").style.fontSize = "35px";
-	  }
-	}
-	</script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/main.js"></script>
+
 </html>
