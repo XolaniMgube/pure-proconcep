@@ -1,118 +1,76 @@
 html{
-	overflow-x:hidden;
-    width:100%;
+	overflow-x: hidden;
+	width:100%;
 }
 
 #home-section{
-	height: 100vh;
-	grid-template-rows: 60px 1fr 200px 100px;
-/*	grid-template-areas:
-		"nav"
-		"socials"
-		"more"
-	;*/
-	background: url(../images/background-medium2.jpg) no-repeat 50% 0px;
+	background: url(../images/background-image.jpg) no-repeat 10% 50%;
 }
 
-nav{
-	grid-column: 1/2;
-	grid-row: 1/2;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 60px 1fr;
-	grid-template-areas:
-		"logo	hamburger"
-		"nav-list	nav-list"
-	;
-	overflow: hidden;
-	padding: 0;
-}
-
-
-nav img{
-	display: block;
+header{
+	grid-template-columns: 1fr 1fr;
 }
 
 .logo{
+	padding-left: 0px;
 	grid-area: logo;
-	padding-left: 4%;
-	
+}
+
+
+
+
+
+nav{
+	grid-area: nav;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 1fr;
+	grid-template-areas:
+		"hamburger"
+		"nav-list"
+	;
+	height: 60px;
+	width: 100%;
+	overflow: hidden;
 }
 
 .hamburger-menu{
 	grid-area: hamburger;
-	justify-self: right;
-	padding-right: 50px;
+	z-index: 5;
+	justify-self: end;
+	width: 24px;
+}
+
+nav img{
+	display: block;
+	width: 24px;
+	
 }
 
 .nav-list{
 	grid-area: nav-list;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	align-items: center;
-	width: 50vw;
-	height: 50vh;
 	background-color: #1a1a1a;
+	z-index: 10;
+	height: 50vh;
+	/* width: 50vw; */
+}
+
+ul.nav-list{
 	padding: 0;
 	margin: 0;
-	z-index: 10;
-	
 }
 
-.nav-list a{
-	font-size: 20pt;
-}
-
-.hamburger-menu img{
-	width: 30px;
-
-}
-
-.socials{
-	grid-column: 1/2;
-	grid-row: 3/5;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	align-items: center;
-	font-size: 14pt;
-	background: rgba(0,0,0,0.5);
-}
-
-.inside-socials{
-	padding-left: 0px;
-}
-
-.socials img{
-	width: 25px;
-}
-
-.socials.other-pages{
-	display: none;
+ul.nav-list li a{
+	padding: 45px 0
 }
 
 
+/* 
 
-.more{
-	grid-column: 1/2;
-	grid-row: 4/5;
-	width: 200px;
-	height: 50px;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas:d
-		"view-more"
-	;
-}
-
-.view-more{
-	grid-area: view-more;
-	width: 100%;
-}
-
-.more-info{
-	display: none;
-}
 
 
 
@@ -122,13 +80,13 @@ nav img{
 /*the thing that makes the nav work well on mobile*/
 /*important******************************************************************/
 /*important*************************************************************/
-.find-a-home-nav{
+/* .find-a-home-nav{
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 60px;
 	z-index: 3;
 
-}
+} */
 
 
 
@@ -156,16 +114,20 @@ nav img{
 
 #about-section{
 	grid-template-columns: 1fr;
-	grid-template-rows:1fr 1fr 3fr 3fr 3fr;
+	grid-template-rows:100px 100px 150px 400px;
 	grid-template-areas:
 		"about-header"
 		"about-us"
-		"mission"
-		"values"
-		"scope"
+		"statement-images"
+		"about-nyiko"
 	;
-	width: 95%;
+	width: 100%;
+	min-width: 600px;
+	margin: 0;
+}
 
+.statement-articles{
+	display: none;
 }
 
 
