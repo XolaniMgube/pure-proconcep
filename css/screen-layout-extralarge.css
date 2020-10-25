@@ -67,7 +67,6 @@ nav{
 	grid-template-areas:
 		"navlist"
 		;
-	/* max-width: 800px; */
 	width: 500px; 
 	justify-self: end;
 	padding: 51px 40px 0 0;
@@ -206,8 +205,8 @@ nav img{
 
  #about-section{
 	display: grid;
-	grid-template-columns: 60% 40%;
-	grid-template-rows: 100px 100px auto 100px;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: 100px 100px 600px 100px;
 	grid-template-areas:
 		"about-header	        about-header"
 		"about-us		        about-us"
@@ -323,9 +322,12 @@ nav img{
 		"find-a-home-text     find-a-home-text"
 		"house1               house2"
 		;
+	justify-self: center;
+	grid-gap: 10px;
 	padding-top: 100px;
-	width: 65%;
+	width: 1200px;
 	margin: 0 auto;
+	min-width: 900px;
 }
 
 #find-a-home h1{
@@ -339,11 +341,13 @@ nav img{
 
 .house{
 	width: 100%;
+	display: grid;
+	justify-items: center;
 }
 
 .house img{
 	min-width: 50%; 
-	max-width: 80%; 
+	max-width: 98%;
 }
 
 .house.one{
@@ -358,17 +362,18 @@ nav img{
 .house .house-info{
 	background-color: #b8e1c6;
 	padding: 20px;
-	width: 90%;
+	width: 92%;
 }
 
 #find-a-home .view-more{
 	background-color: #2c874a;
-	width: 300px;
+	width: 290px;
 }
 
 #find-a-home .enquire{
 	background-color: #3d3d3d;
-	width: 296px;
+	width: 295px;
+
 }
 
 .house div button{
@@ -407,8 +412,9 @@ nav img{
 		"contact-form         more-contact-info"
 		;
 	padding-top: 100px;
-	width: 65%;
+	width: 1200px;
 	margin: 0 auto;
+	min-width: 900px;
 }
 
 #contact-section h1{
@@ -428,29 +434,45 @@ nav img{
 button.whatsapp{
 	border: 2px solid #30b944;
 	background: url(../images/whatsapp.png) no-repeat 40px 50%;
-	color: #30b944;
 	padding-left: 30px;
+}
+
+.whatsapp a{
+	color: #30b944;
+	padding: 15px 50px;
 }
 
 button.linkedin{
 	border: 2px solid #0077b7;
 	background: url(../images/linkedin.png) no-repeat 40px 50%;
-	color: #0077b7;
 	padding-left: 30px;
+}
+
+.linkedin a{
+	color: #0077b7;
+	padding: 15px 50px;
 }
 
 button.facebook{
 	border: 2px solid #3c5a99;
 	background: url(../images/facebook.png) no-repeat 30px 50%;
-	color: #3c5a99;
 	padding-left: 20px;
+}
+
+.facebook a{
+	color: #3c5a99;
+	padding: 15px 50px;
 }
 
 button.twitter{
 	border: 2px solid #50abf1;
 	background: url(../images/twitter.png) no-repeat 50px 50%;
-	color: #50abf1;
 	padding-left: 30px;
+}
+
+.twitter a{
+	color: #50abf1;
+	padding: 15px 50px;
 }
 
 .social-media-links button{
@@ -577,7 +599,41 @@ form{
 	cursor: pointer;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
+	width: 1200px;
+	min-width: 900px;
+	margin: 0 auto;
 	background-color: #b8e1c6;
 	text-align: center;
 	padding: 20px 0;
@@ -614,6 +670,60 @@ footer{
 @media only screen and (max-width: 1200px) {
 	body {
 	  background-color: lightblue;
+	}
+
+	#about-section{
+		width: 100%;
+		min-width: 600px;
+	}
+
+	#find-a-home{
+		width: 100%;
+		min-width: 850px;
+		grid-template-rows: 50px 50px 500px;
+	}
+
+	/* #find-a-home{
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: 50px 50px 600px;
+		grid-template-areas:
+			"find-a-home-header   find-a-home-header"
+			"find-a-home-text     find-a-home-text"
+			"house1               house2"
+			;
+		justify-self: center;
+		grid-gap: 10px;
+		padding-top: 100px;
+		width: 1200px;
+		margin: 0 auto;
+		min-width: 900px;
+	} */
+
+	#find-a-home .view-more{
+		background-color: #2c874a;
+		min-width: 100px;
+		display: none;
+	}
+	
+	#find-a-home .enquire{
+		background-color: #3d3d3d;
+		min-width: 100px;
+		display: none;
+	}
+	
+	.house div button{
+		width: 10%;
+	}
+
+	#contact-section{
+		width: 100%;
+		min-width: 850px;
+	}
+
+	footer{
+		width: 100%;
+		min-width: 850px;
 	}
   }
 

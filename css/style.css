@@ -95,7 +95,7 @@ a:hover{
 }
 
 button{
-	width: 240px;
+	/* width: 240px; */
 	border: none;
 	margin: 0;
 	padding: 0;
@@ -112,5 +112,5 @@ button:hover{
 }
 
 button a{
-	padding: 15px 70px;
+	/* padding: 15px 70px; */
 }
