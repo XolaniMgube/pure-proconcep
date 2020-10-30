@@ -1,7 +1,7 @@
-html{
+/* html{
 	overflow-x: hidden;
-	width:100%;
-}
+	width:50%;
+} */
 
 #home-section{
 	background: url(../images/background-image.jpg) no-repeat 10% 50%;
@@ -69,24 +69,90 @@ ul.nav-list li a{
 }
 
 
-/* 
 
 
 
 
 
 
-/*important*****************************************************************/
-/*the thing that makes the nav work well on mobile*/
-/*important******************************************************************/
-/*important*************************************************************/
-/* .find-a-home-nav{
-	display: grid;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	background-color: pink;
+  }
+
+  #about-section{
+	/* width: 100%; */
+	/* min-width: 600px;
+	max-width: 850px; */
 	grid-template-columns: 1fr;
-	grid-template-rows: 60px;
-	z-index: 3;
+	grid-template-rows:100px 100px 150px 400px;
+	grid-template-areas:
+		"about-header"
+		"about-us"
+		"statement-images"
+		"about-nyiko"
+	;
+	margin: 0;
+	overflow: visible;
+	box-sizing: border-box;
+  }
 
-} */
+
+
+.statement-articles{
+	display: none;
+}
+
+  #find-a-home{
+	  width: 100%;
+	  min-width: 600px;
+	  grid-template-rows: 50px 50px 500px;
+  }
+
+  #find-a-home .view-more{
+	  background-color: #2c874a;
+	  min-width: 100px;
+	  display: none;
+  }
+  
+  #find-a-home .enquire{
+	  background-color: #3d3d3d;
+	  min-width: 100px;
+	  display: none;
+  }
+  
+  .house div button{
+	  width: 10%;
+  }
+
+  #contact-section{
+	  width: 90%;
+	  min-width: 850px;
+  }
+
+  footer{
+	  width: 90%;
+	  min-width: 850px;
+  }
+
 
 
 
@@ -112,7 +178,7 @@ ul.nav-list li a{
 
 /*About Us**************************************************************************/
 
-#about-section{
+/* #about-section{
 	grid-template-columns: 1fr;
 	grid-template-rows:100px 100px 150px 400px;
 	grid-template-areas:
@@ -128,7 +194,7 @@ ul.nav-list li a{
 
 .statement-articles{
 	display: none;
-}
+} */
 
 
 
@@ -150,7 +216,7 @@ ul.nav-list li a{
 
 
 
-#find-a-home{
+/* #find-a-home{
 	width: 95%;
 	margin: 0 auto;
 	grid-gap: 0;
@@ -187,7 +253,7 @@ ul.nav-list li a{
 		"view-house"
 	;
 	align-self: center;
-}
+} */
 
 
 
@@ -201,7 +267,7 @@ ul.nav-list li a{
 
 
 
-form{
+/* form{
 	grid-template-columns: 1fr;
 	grid-template-rows: 2fr 1fr 40px 40px 150px 40px;
 	grid-template-areas:
@@ -225,5 +291,5 @@ form{
 
 .message{
 	width: 100%;
-}
+} */
 
