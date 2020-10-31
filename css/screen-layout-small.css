@@ -3,175 +3,74 @@ html{
     width:100%;
 }
 
-h1{
-	font-size: 40pt;
-}
-
-
-
-
-
-
 #home-section{
-	height: 92vh;
-	grid-template-rows: 60px 1fr 80px 100px;
-	/*grid-template-areas:
-		"nav"
-		"socials"
-		"more"
-	;*/
-	background: url(../images/background-small2.jpg) no-repeat 50% 0px;
+	background: url(../images/background-image.jpg) no-repeat 10% 50%;
 }
 
-nav{
-	grid-column: 1/2;
-	grid-row: 1/2;
-	display: grid;
-	grid-template-columns: 2fr 1fr;
-	grid-template-rows: 60px 1fr;
-	grid-template-areas:
-		"logo	hamburger"
-		"nav-list		nav-list"
-	;
-	overflow: hidden;
-	padding: 0;
-}
-
-nav img{
-	display: block;
+header{
+	grid-template-columns: 1fr 1fr;
 }
 
 .logo{
+	padding-left: 0px;
 	grid-area: logo;
-	padding-left: 4%;
+}
+
+#logoText{
+	display: none;
+}
+
+nav{
+	grid-area: nav;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 60px 1fr;
+	grid-template-areas:
+		"hamburger"
+		"nav-list"
+	;
+	height: 60px;
+	width: 100%;
+	overflow: hidden;
 }
 
 .hamburger-menu{
 	grid-area: hamburger;
-	justify-self: right;
-	padding-right: 40px;
+	z-index: 5;
+	justify-self: end;
+	width: 24px;
+}
+
+nav img{
+	display: block;
+	width: 24px;
+	
 }
 
 .nav-list{
 	grid-area: nav-list;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
 	align-items: center;
-	width: 100vw;
-	height: 50vh;
 	background-color: #1a1a1a;
+	z-index: 10;
+	height: 50vh;
+	/* width: 50vw; */
+}
+
+ul.nav-list{
 	padding: 0;
 	margin: 0;
-	z-index: 10;
-	
 }
 
-.nav-list a{
-	font-size: 16pt;
+ul.nav-list li a{
+	padding: 45px 0
 }
 
-.hamburger-menu img{
-	width: 25px;
-
-}
-
-.socials{
-	grid-column: 1/2;
-	grid-row: 3/5;
-	align-items: top;
-	padding-top: 40px;
-	font-size: 14pt;
-	background: rgba(0,0,0,0.5);
-}
-
-.inside-socials{
-	padding-left: 0;
-
-}
-
-.inside-socials{
-	grid-area: inside-socials;
-	display: grid;
-	grid-template-columns: 1fr 1fr 3fr;
-	grid-template-rows: 1fr;
-	grid-template-areas:
-		"facebook phone	number"
-	;
-	justify-self: center;
-	width: 250px;
-	justify-items: center;
-	grid-gap:0;
-}
-
-.facebook{
-	grid-area: facebook;
-	justify-self: center;
-}
-
-
-
-.phone{
-	grid-area: phone;
-}
-
-.number{
-	grid-area: number;
-}
-
-.socials img{
-	width: 25px;
-}
-
-.socials.other-pages{
+.ad-box{
 	display: none;
 }
-
-
-
-.more{
-	grid-column: 1/2;
-	grid-row: 4/5;
-	width: 200px;
-	height: 50px;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas:d
-		"view-more"
-	;
-}
-
-.view-more{
-	grid-area: view-more;
-	width: 100%;
-}
-
-.more-info{
-	display: none;
-}
-
-
-
-
-
-
-.find-a-home-nav{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 60px;
-	z-index: 3;
-
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -181,47 +80,26 @@ nav img{
 
 
 #about-section{
+	width: 100%;
+	min-width: 50px;
+	max-width: 600px;
 	grid-template-columns: 1fr;
-	grid-template-rows:1fr 2fr 4fr 4fr 4fr;
+	grid-template-rows:100px 100px 150px 500px;
 	grid-template-areas:
 		"about-header"
+		"statement-images"
 		"about-us"
-		"mission"
-		"values"
-		"scope"
-	;
-	width: 95%;
-	grid-gap: 0;
-
-}
-
-
-#about-section article{
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 2fr 3fr;
-	grid-template-areas:
-		"mission-header"
-		"mission-icon"
-		"mission-paragraph"
+		"about-nyiko"
 	;
 }
 
+.about-us{
+	background-color: #f1f1f1;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.statement-articles{
+	display: none;
+}
 
 
 
@@ -240,42 +118,68 @@ nav img{
 
 
 #find-a-home{
-	width: 95%;
-	margin: 0 auto;
-	grid-gap: 0;
+	width: 100%;
+	min-width: 50px;
+	max-width: 600px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 50px 70px auto auto;
+	grid-template-areas:
+		"find-a-home-header"
+		"find-a-home-text"
+		"house1"
+		"house2"
+	;
+	justify-items: center;
+	box-sizing: border-box;
+	margin: 0;
 }
 
-
-
-
-.home{
+.house{
+	box-sizing: border-box;
+	width: 100%;
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr;
-	grid-template-areas:
-		"home-images"
-		"home-info"
-	;
-	padding: 50px 0;
+	grid-template-rows: 1fr;
+	border: none;
 }
 
+.house.two{
+	grid-area: house2;
+	justify-self: start;
+}
 
-.home-info .location{
-	grid-area: home-info;
-	padding-left: 0px;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr auto 1fr;
-	grid-template-areas:
-		"info-header"
-		"status"
-		"description"
-		"price"
-		"view-house"
-	;
+.house img{
+	width: 100%;
+	min-width: 50px; 
+	max-width: 530px;
 	align-self: center;
 }
 
+.house .house-info{
+	box-sizing: border-box;
+	background-color: #b8e1c6;
+	padding: 20px;
+	width: 100%;
+	display: none;
+}
+
+#find-a-home .view-more{
+	background-color: #2c874a;
+	/* box-sizing: border-box; */
+	min-width: 100px;
+	max-width: 500px;
+	/* width: 500px; */
+	display: block;
+}
+
+#find-a-home .enquire{
+	background-color: #3d3d3d;
+	min-width: 100px;
+	display: none;
+}
+
+.house div button{
+	width: 10%;
+}
 
 
 
@@ -298,79 +202,37 @@ nav img{
 
 
 
+
+
+
+
+
+#contact-section{
+	width: 100%;
+	min-width: 50px;
+	max-width: 600px;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px 300px 540px 540px;
+	grid-template-areas:
+		"contact-header"
+		"social-media-links"
+		"contact-form"
+		"more-contact-info"
+}
+
+.social-media-links{
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+form{
+	min-width: 200px;
+}
 
 
 
 footer{
-	grid-template-columns: 1fr;
-	grid-template-rows: 3fr 3fr 1fr;
-	grid-template-areas:
-		"section1"
-		"section2"
-		"copyrights"
-	;
-	background-color: black;
-	color: white;
-	justify-items: center;
-	padding: 20px;
-}
-
-.section.one{
-	grid-area: section1;
-	text-align: center;
-}
-
-.section.two{
-	grid-area: section2;
-}
-
-.copyrights{
-	grid-area: copyrights;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-form{
-	grid-template-columns: 1fr;
-	grid-template-rows: 2fr 1fr 40px 40px 150px 40px;
-	grid-template-areas:
-		"contact-header"
-		"contact-sub-header"
-		"name"
-		"email"
-		"message"
-		"submit"
-	;
-	grid-gap: 30px;
-	width: 95%;
-}
-
-.name{
 	width: 100%;
-}
-
-.email{
-	width: 100%;
-}
-
-.message{
-	width: 100%;
+	min-width: 600px;
+	max-width: 850px;
 }
