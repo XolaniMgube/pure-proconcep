@@ -9,8 +9,8 @@ window.onscroll = function() {scroll()};
 		if (document.body.scrollTop > 60 || document.documentElement.scrollTop > 60) {
 			document.getElementById("header").style.height = "70px";
 			document.getElementById("logoImg").style.width = "75px";
-			document.getElementById("logoImg").style.padding = "0px 0px 50px 70px";
-			document.getElementById("logoText").style.padding = "0px";
+			document.getElementById("logoImg").style.padding = "0px 0px 50px 10px";
+			document.getElementById("logoText").style.padding = "0px 60px 0px 0px";
 			document.getElementById("logoText").style.fontSize = "25px";
 			document.getElementById("navbar").style.padding = "21px 40px 0px 0px"
 		}   else{
