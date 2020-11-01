@@ -13,6 +13,7 @@ window.onscroll = function() {scroll()};
 			document.getElementById("logoText").style.padding = "0px 60px 0px 0px";
 			document.getElementById("logoText").style.fontSize = "25px";
 			document.getElementById("navbar").style.padding = "21px 40px 0px 0px"
+			document.querySelector(".nav-list").style.top = "60px"
 		}   else{
 			document.getElementById("header").style.height = "100px";
 			document.getElementById("logoImg").style.width = "160px";
@@ -20,12 +21,8 @@ window.onscroll = function() {scroll()};
 			document.getElementById("logoText").style.padding = "35px 0 0 20px";
 			document.getElementById("logoText").style.fontSize = "22pt"
 			document.getElementById("navbar").style.padding = "51px 40px 0px 0px"
+			document.querySelector(".nav-list").style.top = "100px"
 		}
-
-		// var x = window.matchMedia("(max-width: 700px)")
-		// if (x.matches) {
-		// 	document.getElementById("header").style.color = "red";
-		// }
 	}
 
 
@@ -40,16 +37,16 @@ window.onscroll = function() {scroll()};
 // Responsiveness of the navigation bar
 let toggleNavStatus = false;
 let toggleNav = function(){
-	let getNav = document.querySelector(".nav");
+	let getNav = document.querySelector(".nav-list");
 
 	if (toggleNavStatus === false){
-		getNav.style.overflow = "visible";
+		getNav.style.display = "block";
 
 		toggleNavStatus = true; 
 		} 
 
 	else if (toggleNavStatus === true){
-		getNav.style.overflow = "hidden";
+		getNav.style.display = "none";
 
 		toggleNavStatus = false;
 	}
