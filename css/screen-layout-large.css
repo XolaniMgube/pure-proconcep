@@ -9,6 +9,7 @@
   width: 90%;
   min-width: 850px;
   grid-template-rows: 50px 50px 500px;
+  height: 700px;
 }
 
 #find-a-home .view-more {

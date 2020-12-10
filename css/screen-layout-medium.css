@@ -33,7 +33,7 @@ nav {
 }
 
 .nav-links li a {
-  padding: 50px;
+  padding: 56px;
 }
 
 .burger {
@@ -95,7 +95,7 @@ nav {
   width: 100%;
   min-width: 600px;
   grid-template-columns: 1fr;
-  grid-template-rows: 50px 50px 700px 700px;
+  grid-template-rows: 50px 50px 600px 600px;
   grid-template-areas:
     "find-a-home-header"
     "find-a-home-text"
@@ -103,6 +103,10 @@ nav {
     "house2";
   justify-items: center;
   box-sizing: border-box;
+}
+
+#find-a-home h1 {
+  justify-self: left;
 }
 
 .house {
@@ -127,8 +131,9 @@ nav {
 .house .house-info {
   box-sizing: border-box;
   background-color: #b8e1c6;
-  padding: 20px;
+  padding: 15px;
   width: 530px;
+  height: 155px;
 }
 
 #find-a-home .view-more {

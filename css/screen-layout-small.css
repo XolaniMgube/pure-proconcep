@@ -1,8 +1,8 @@
 /** @format */
 
 html {
-  overflow-x: hidden;
-  width: 100%;
+  /* overflow-x: hidden; */
+  /* width: 100%; */
 }
 
 #home-section {
@@ -12,6 +12,7 @@ html {
 .nav-links {
   width: 100%;
   top: 70px;
+  height: 80vh;
 }
 
 nav {
@@ -54,7 +55,7 @@ nav {
   min-width: 50px;
   max-width: 600px;
   grid-template-columns: 1fr;
-  grid-template-rows: 100px 100px 150px 500px;
+  grid-template-rows: 100px 100px 150px 550px;
   grid-template-areas:
     "about-header"
     "statement-images"
@@ -64,6 +65,10 @@ nav {
 
 .about-us {
   background-color: #f1f1f1;
+}
+
+#about-section p {
+  padding: 3% 10px;
 }
 
 .statement-articles {
@@ -92,6 +97,7 @@ nav {
   display: grid;
   grid-template-rows: 1fr;
   border: none;
+  margin-top: 30px;
 }
 
 .house.two {
@@ -109,18 +115,23 @@ nav {
 .house .house-info {
   box-sizing: border-box;
   background-color: #b8e1c6;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
-  display: none;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
 }
+
+.house .house-info .info-header, .house .house-info .status {
+  display: none;
+} 
 
 #find-a-home .view-more {
   background-color: #2c874a;
-  /* box-sizing: border-box; */
   min-width: 100px;
   max-width: 500px;
-  /* width: 500px; */
-  display: block;
+  display: none;
 }
 
 #find-a-home .enquire {
@@ -151,12 +162,33 @@ nav {
   grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
+
 form {
-  min-width: 200px;
+  grid-template-columns: 100%;
+  width: 100%;
+}
+
+.contact-sub-header {
+  padding: 0 5px;
+}
+
+.name, .email {
+  width: 350px;
+  height: 40px;
+}
+
+.message {
+  width: 335px;
+}
+
+.submit {
+  justify-self: center;
+  margin-left: 0px;
 }
 
 footer {
   width: 100%;
-  min-width: 600px;
-  max-width: 850px;
+  min-width: 50px;
+  max-width: 600px;
+  font-size: 10px;
 }

@@ -5,10 +5,10 @@ window.onscroll = function () {
   scroll();
 };
 
-function nav() {
-  let navHeight = document.querySelector("nav");
-  navHeight = navHeight.classList.add(".navbar");
-}
+// function nav() {
+//   let navHeight = document.querySelector("nav");
+//   navHeight = navHeight.classList.add(".navbar");
+// }
 
 function scroll() {
   let navigation = document.querySelector("nav");
@@ -41,10 +41,10 @@ function scroll() {
     logoImg.style.width = "60px";
     logo.style.gridTemplateColumns = "65px 1fr";
   }
-
-  console.log(window.innerWidth);
 }
 
+
+// Sliding navigation on tab and mobile view
 const navSlide = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".nav-links");
@@ -72,8 +72,13 @@ const navSlide = () => {
 
 navSlide();
 
+
+
+
+
+
 // Styling the nav links when they are active
-function addClass() {
+function activeNavLinks() {
   let element = document.getElementsByClassName("navigation");
   for (let i = 0; i < element.length; i++) {
     element[i].addEventListener("click", function () {
@@ -85,8 +90,10 @@ function addClass() {
     });
   }
 }
+activeNavLinks();
 
-addClass();
+
+
 
 // Smooth scrooll effect on cross browser in JQuery
 $(document).ready(function () {

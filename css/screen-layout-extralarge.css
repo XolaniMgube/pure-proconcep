@@ -237,10 +237,19 @@ nav {
 .about-nyiko img {
   width: 320px;
   height: 250px;
+  align-self: center;
 }
 
 .about-nyiko p {
   padding: 0 25px;
+}
+
+.about-nyiko h3 {
+  align-self: end;
+}
+
+.about-nyiko h4 {
+  font-size: 12px;
 }
 
 .about-nyiko .nyiko-social-media img {
@@ -335,6 +344,9 @@ nav {
 .house div button {
   width: 100%;
 }
+
+
+/* Contact section ********************************************/
 
 #contact-section {
   display: grid;
