@@ -1,238 +1,162 @@
-html{
-	overflow-x:hidden;
-    width:100%;
+/** @format */
+
+html {
+  overflow-x: hidden;
+  width: 100%;
 }
 
-#home-section{
-	background: url(../images/background-image.jpg) no-repeat 10% 50%;
+#home-section {
+  background: url(../images/background-image.jpg) no-repeat 10% 50%;
 }
 
-header{
-	grid-template-columns: 1fr 1fr;
+.nav-links {
+  width: 100%;
+  top: 70px;
 }
 
-.logo{
-	padding-left: 0px;
-	grid-area: logo;
+nav {
+  grid-template-rows: 70px;
+  height: 70px;
 }
 
-#logoText{
-	display: none;
+.logo {
+  grid-template-columns: 65px 1fr;
 }
 
-nav{
-	grid-area: nav;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 60px 1fr;
-	grid-template-areas:
-		"hamburger"
-		"nav-list"
-	;
-	height: 60px;
-	width: 100%;
-	overflow: hidden;
+.logo img {
+  width: 60px;
 }
 
-.hamburger-menu{
-	grid-area: hamburger;
-	z-index: 5;
-	justify-self: end;
-	width: 24px;
+.logo h2 {
+  font-size: 20px;
 }
 
-nav img{
-	display: block;
-	width: 24px;
-	
+.floating-text {
+  font-size: 14px;
+  letter-spacing: 5px;
 }
 
-.nav-list{
-	grid-area: nav-list;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-	align-items: center;
-	background-color: #1a1a1a;
-	z-index: 10;
-	height: 50vh;
-	/* width: 50vw; */
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+  to {
+    width: 280px;
+  }
 }
 
-ul.nav-list{
-	padding: 0;
-	margin: 0;
+.ad-box {
+  display: none;
 }
 
-ul.nav-list li a{
-	padding: 45px 0
+#about-section {
+  width: 100%;
+  min-width: 50px;
+  max-width: 600px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 100px 150px 500px;
+  grid-template-areas:
+    "about-header"
+    "statement-images"
+    "about-us"
+    "about-nyiko";
 }
 
-.ad-box{
-	display: none;
+.about-us {
+  background-color: #f1f1f1;
 }
 
-
-
-
-
-
-
-
-#about-section{
-	width: 100%;
-	min-width: 50px;
-	max-width: 600px;
-	grid-template-columns: 1fr;
-	grid-template-rows:100px 100px 150px 500px;
-	grid-template-areas:
-		"about-header"
-		"statement-images"
-		"about-us"
-		"about-nyiko"
-	;
+.statement-articles {
+  display: none;
 }
 
-.about-us{
-	background-color: #f1f1f1;
+#find-a-home {
+  width: 100%;
+  min-width: 50px;
+  max-width: 600px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 70px auto auto;
+  grid-template-areas:
+    "find-a-home-header"
+    "find-a-home-text"
+    "house1"
+    "house2";
+  justify-items: center;
+  box-sizing: border-box;
+  margin: 0;
 }
 
-.statement-articles{
-	display: none;
+.house {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr;
+  border: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#find-a-home{
-	width: 100%;
-	min-width: 50px;
-	max-width: 600px;
-	grid-template-columns: 1fr;
-	grid-template-rows: 50px 70px auto auto;
-	grid-template-areas:
-		"find-a-home-header"
-		"find-a-home-text"
-		"house1"
-		"house2"
-	;
-	justify-items: center;
-	box-sizing: border-box;
-	margin: 0;
+.house.two {
+  grid-area: house2;
+  justify-self: start;
 }
 
-.house{
-	box-sizing: border-box;
-	width: 100%;
-	display: grid;
-	grid-template-rows: 1fr;
-	border: none;
+.house img {
+  width: 100%;
+  min-width: 50px;
+  max-width: 530px;
+  align-self: center;
 }
 
-.house.two{
-	grid-area: house2;
-	justify-self: start;
+.house .house-info {
+  box-sizing: border-box;
+  background-color: #b8e1c6;
+  padding: 20px;
+  width: 100%;
+  display: none;
 }
 
-.house img{
-	width: 100%;
-	min-width: 50px; 
-	max-width: 530px;
-	align-self: center;
+#find-a-home .view-more {
+  background-color: #2c874a;
+  /* box-sizing: border-box; */
+  min-width: 100px;
+  max-width: 500px;
+  /* width: 500px; */
+  display: block;
 }
 
-.house .house-info{
-	box-sizing: border-box;
-	background-color: #b8e1c6;
-	padding: 20px;
-	width: 100%;
-	display: none;
+#find-a-home .enquire {
+  background-color: #3d3d3d;
+  min-width: 100px;
+  display: none;
 }
 
-#find-a-home .view-more{
-	background-color: #2c874a;
-	/* box-sizing: border-box; */
-	min-width: 100px;
-	max-width: 500px;
-	/* width: 500px; */
-	display: block;
+.house div button {
+  width: 10%;
 }
 
-#find-a-home .enquire{
-	background-color: #3d3d3d;
-	min-width: 100px;
-	display: none;
+#contact-section {
+  width: 100%;
+  min-width: 50px;
+  max-width: 600px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 300px 540px 540px;
+  grid-template-areas:
+    "contact-header"
+    "social-media-links"
+    "contact-form"
+    "more-contact-info";
 }
 
-.house div button{
-	width: 10%;
+.social-media-links {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#contact-section{
-	width: 100%;
-	min-width: 50px;
-	max-width: 600px;
-	grid-template-columns: 1fr;
-	grid-template-rows: 100px 300px 540px 540px;
-	grid-template-areas:
-		"contact-header"
-		"social-media-links"
-		"contact-form"
-		"more-contact-info"
+form {
+  min-width: 200px;
 }
 
-.social-media-links{
-	grid-template-columns: 1fr;
-	grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-
-form{
-	min-width: 200px;
-}
-
-
-
-footer{
-	width: 100%;
-	min-width: 600px;
-	max-width: 850px;
+footer {
+  width: 100%;
+  min-width: 600px;
+  max-width: 850px;
 }
