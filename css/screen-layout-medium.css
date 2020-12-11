@@ -87,6 +87,13 @@ nav {
   background-color: #f1f1f1;
 }
 
+.about-nyiko .nyiko-social-media img {
+  width: 28px;
+  height: 28px;
+  padding: 5px;
+  transition: all ease-in 0.2s;
+}
+
 .statement-articles {
   display: none;
 }

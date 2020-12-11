@@ -1,36 +1,5 @@
 /** @format */
 
-// Animation for the header when you scroll lower 60
-window.onscroll = function () {
-  scroll();
-};
-
-let toggleNav = function () {
-  let nav = document.querySelector(".nav-links");
-  let navLinks = document.querySelectorAll(".nav-links li");
-  const burger = document.querySelector(".burger");
-
-  if (window.innerWidth <= 900) {
-    nav.addEventListener("click", () => {
-      nav.classList.toggle("nav-active");
-
-      navLinks.forEach((link, index) => {
-        if (link.style.animation) {
-          link.style.animation = "";
-        } else {
-          link.style.animation = `navLinkFade 0.5s ease forwards ${
-            index / 7 + 0.2
-          }s`;
-        }
-      });
-
-    burger.classList.toggle("toggle");
-    
-    });
-  }
-};
-toggleNav();
-
 
 
 
@@ -72,24 +41,12 @@ function scroll() {
 
 
 
-
-
-
-
-
-
-
-// Sliding navigation on tab and mobile view
-const navSlide = () => {
-  const burger = document.querySelector(".burger");
+const navFunctionality = () => {
   const nav = document.querySelector(".nav-links");
   const navLinks = document.querySelectorAll(".nav-links li");
+  const burger = document.querySelector(".burger");
 
-  burger.addEventListener("click", () => {
-    // Toggle Nav
-    nav.classList.toggle("nav-active");
-
-    // Animate Links
+  let animateLinks = () => {
     navLinks.forEach((link, index) => {
       if (link.style.animation) {
         link.style.animation = "";
@@ -99,20 +56,32 @@ const navSlide = () => {
         }s`;
       }
     });
+  }
 
-    // Burger Animation
+  let burgerToggle = () => {
     burger.classList.toggle("toggle");
-  });
-};
+  } 
 
-navSlide();
+  let navToggle = () => {
+    nav.classList.toggle("nav-active");
+  }
 
+  // Making navLinks go away after clicking on one link && burger menu transformation
+  if (window.innerWidth <= 900) {
+    nav.addEventListener('click', () => {
+      navToggle();
+      animateLinks();
+      burgerToggle();
+    })
+  }
 
-
-
-
-
-
+  // Making navLinks appear and disappear when clicking the burger menu && burger menu transformation
+  burger.addEventListener('click', () => {
+    navToggle();
+    animateLinks();
+    burgerToggle();
+  })
+}
 
 
 
@@ -130,17 +99,16 @@ function activeNavLinks() {
     });
   }
 }
-activeNavLinks();
 
 
 
+let invockingFunctions = () => {
+  window.onscroll = () => scroll();
+  navFunctionality();
+  activeNavLinks();
+};
 
-
-
-
-
-
-
+invockingFunctions();
 
 
 
