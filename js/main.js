@@ -5,10 +5,36 @@ window.onscroll = function () {
   scroll();
 };
 
-// function nav() {
-//   let navHeight = document.querySelector("nav");
-//   navHeight = navHeight.classList.add(".navbar");
-// }
+let toggleNav = function () {
+  let nav = document.querySelector(".nav-links");
+  let navLinks = document.querySelectorAll(".nav-links li");
+  const burger = document.querySelector(".burger");
+
+  if (window.innerWidth <= 900) {
+    nav.addEventListener("click", () => {
+      nav.classList.toggle("nav-active");
+
+      navLinks.forEach((link, index) => {
+        if (link.style.animation) {
+          link.style.animation = "";
+        } else {
+          link.style.animation = `navLinkFade 0.5s ease forwards ${
+            index / 7 + 0.2
+          }s`;
+        }
+      });
+
+    burger.classList.toggle("toggle");
+    
+    });
+  }
+};
+toggleNav();
+
+
+
+
+
 
 function scroll() {
   let navigation = document.querySelector("nav");
@@ -44,6 +70,15 @@ function scroll() {
 }
 
 
+
+
+
+
+
+
+
+
+
 // Sliding navigation on tab and mobile view
 const navSlide = () => {
   const burger = document.querySelector(".burger");
@@ -77,6 +112,11 @@ navSlide();
 
 
 
+
+
+
+
+
 // Styling the nav links when they are active
 function activeNavLinks() {
   let element = document.getElementsByClassName("navigation");
@@ -91,6 +131,16 @@ function activeNavLinks() {
   }
 }
 activeNavLinks();
+
+
+
+
+
+
+
+
+
+
 
 
 

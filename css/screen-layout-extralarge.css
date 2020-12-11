@@ -172,6 +172,10 @@ nav {
   padding: 10px;
 }
 
+.mobile-find-a-home {
+  display: none;
+}
+
 .page {
   /* display: grid; */
   /* grid-gap: 100px; */

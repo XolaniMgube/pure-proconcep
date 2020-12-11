@@ -6,7 +6,7 @@ html {
 }
 
 #home-section {
-  background: url(../images/background-image.jpg) no-repeat 10% 50%;
+  background: url(../images/background-img-medium.png) 10% 50%;
 }
 
 nav {
@@ -170,8 +170,24 @@ nav {
   grid-template-rows: 1fr 1fr;
 }
 
+.more-contact-info p{
+  font-size: 12px;
+}
+
+.more-contact-info h4 {
+  font-size: 12px;
+}
+
+.more-contact-info a {
+  color: rgb(109, 109, 218);
+}
+
 footer {
   width: 100%;
   min-width: 600px;
   max-width: 850px;
+}
+
+footer p {
+  font-size: 12px;
 }
